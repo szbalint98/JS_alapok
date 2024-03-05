@@ -4,8 +4,10 @@ window.addEventListener("load", function () {
     elemekElerese3();
     elemekElerese4();
     Elemekformazasa1();
+    Esemenykezeles1();
+    Esemenykezeles2();
 });
-
+const listam=[]
 function elemekElerese1() {
     let cim=document.getElementById('f1')
     cim=cim.innerHTML;
@@ -23,7 +25,7 @@ function elemekElerese3() {
 }
 function elemekElerese4() {
     let div=document.querySelector('.lista')
-    const listam=[]
+    
     let min=10
     let max =30
     let random=0
@@ -40,4 +42,24 @@ function Elemekformazasa1(){
     let div=document.querySelector('.lista')
     div.classList.add("formazott");
 
+}
+function Esemenykezeles1(){
+    let div=document.querySelector('.lista')
+    div.addEventListener('click',belerak);
+
+}
+function belerak() {
+    let div=document.querySelector('.kattintasutan')
+    div=div.innerHTML
+    let listadiv=document.querySelector('.lista')
+    listadiv=listadiv.innerHTML
+    div=listadiv
+    console.log(listadiv)
+}
+function Esemenykezeles2(){
+    let div=document.querySelector('.feladat')
+    div.innerHTML+="<button>OK</button>";
+    console.log(div)
+    elem=document.querySelector('.feladat button')
+    console.log(elem)
 }
