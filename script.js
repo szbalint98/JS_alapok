@@ -65,7 +65,7 @@ function Esemenykezeles2(){
     elem.addEventListener('click',hozzaad);
 }
 function hozzaad(){
-    let div=document.querySelector('.feladat button')
+    let div=document.querySelector('.feladat')
     div+=`<div><img src="kepek/heble.jpg" alt="kep"></div>`;
     console.log(div.innerHTML)
     
