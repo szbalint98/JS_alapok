@@ -66,7 +66,8 @@ function Esemenykezeles2(){
 }
 function hozzaad(){
     let div=document.querySelector('.feladat')
-    div+=`<div><img src="kepek/heble.jpg" alt="kep"></div>`;
+    console.log(div)
+    div+="<div><img src="kepek/heble.jpg" alt="kep"></div>";
     console.log(div.innerHTML)
     
     
