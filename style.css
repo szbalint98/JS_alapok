@@ -49,7 +49,14 @@ div {
 img {
     width: 100%;
 }
+.imgformaz{
 
+    width: 100px;
+}
+.imgformaz2{
+
+    width: 500px;
+}
 div.tarolo {
     display: flex;
     justify-content: flex-start;

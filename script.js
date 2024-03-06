@@ -6,12 +6,13 @@ window.addEventListener("load", function () {
     Elemekformazasa1();
     Esemenykezeles1();
     Esemenykezeles2();
+    Esemenykezeles4();
 });
 const listam=[]
 function elemekElerese1() {
     let cim=document.getElementById('f1')
-    cim=cim.innerHTML;
     console.log(cim)
+    console.log(cim.innerHTML)
 }
 function elemekElerese2() {
     let div=document.getElementById('ide')
@@ -63,11 +64,39 @@ function Esemenykezeles2(){
     let elem=document.querySelector('.feladat button')
     console.log(elem)
     elem.addEventListener('click',hozzaad);
+
 }
 function hozzaad(){
     let divELEM=document.querySelector('.feladat')
     console.log(divELEM)
     divELEM.innerHTML+=`<div><img src="kepek/heble.jpg" alt="kep"></div>`
-    
+    Esemenykezeles3();
+    ES
     
 }
+function Esemenykezeles3(){
+    let elem=document.querySelector('.feladat img')
+    elem.addEventListener('mouseover',valtozas1)
+    elem.addEventListener('mouseout',valtozas2)
+
+}
+function valtozas1(){
+    let divelem=document.querySelector('.feladat img')
+    divelem.classList.add("imgformaz");
+}
+ function valtozas2() {
+    let divelem=document.querySelector('.feladat img')
+    divelem.classList.remove("imgformaz");
+ }
+ function Esemenykezeles4() {
+    let divElemek=document.querySelectorAll('.tarolo .elem')
+    for (let index = 0; index < divElemek.length; index++) {
+            divElemek[index].addEventListener('click',katt)        
+    }
+ }
+ function katt(event) {
+    const erdmenyElem=document.querySelector('.eredmeny')
+    console.log(erdmenyElem)
+    let kattintottEelem=event.target
+    erdmenyElem.innerHTML=kattintottEelem.innerHTML
+ }
