@@ -34,9 +34,9 @@ function elemekElerese4() {
         listam.push(random)
         div.innerHTML+=(`${listam[index]},`)
     }
-    div.innerHTML+=(listam[0])
+    
     console.log(listam)
-    console.log(listam)
+    
 }
 function Elemekformazasa1(){
     let div=document.querySelector('.lista')
@@ -60,6 +60,14 @@ function Esemenykezeles2(){
     let div=document.querySelector('.feladat')
     div.innerHTML+="<button>OK</button>";
     console.log(div)
-    elem=document.querySelector('.feladat button')
+    let elem=document.querySelector('.feladat button')
     console.log(elem)
+    elem.addEventListener('click',hozzaad);
+}
+function hozzaad(){
+    let div=document.querySelector('.feladat button')
+    div+=`<div><img src="kepek/heble.jpg" alt="kep"></div>`;
+    console.log(div.innerHTML)
+    
+    
 }
