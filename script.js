@@ -49,11 +49,11 @@ function Esemenykezeles1(){
 
 }
 function belerak() {
-    let div=document.querySelector('.kattintasutan')
-    div=div.innerHTML
-    let listadiv=document.querySelector('.lista')
-    listadiv=listadiv.innerHTML
-    div=listadiv
+    let div=document.querySelector('.lista')
+    let divTartalom=div.innerHTML
+    let listadiv=document.querySelector('.kattintasutan')
+    listadiv.innerHTML=divTartalom
+   
     console.log(listadiv)
 }
 function Esemenykezeles2(){
@@ -65,10 +65,9 @@ function Esemenykezeles2(){
     elem.addEventListener('click',hozzaad);
 }
 function hozzaad(){
-    let div=document.querySelector('.feladat')
-    console.log(div)
-    div+="<div><img src="kepek/heble.jpg" alt="kep"></div>";
-    console.log(div.innerHTML)
+    let divELEM=document.querySelector('.feladat')
+    console.log(divELEM)
+    divELEM.innerHTML+=`<div><img src="kepek/heble.jpg" alt="kep"></div>`
     
     
 }
