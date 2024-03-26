@@ -33,23 +33,25 @@ function elemekElerese4() {
     let min=10
     let max =30
     let random=0
+    let text=""
     for (let index = 0; index < 5; index++) {
         random=Math.floor(Math.random()*(max-min+1))+min
         listam.push(random)
-        div.html(`${listam[index]},`)
+        text+=(`${listam[index]},`)
+        div.html(text)
     }
     
     console.log(listam)
     
 }
 function Elemekformazasa1(){
-    let div=document.querySelector('.lista')
-    div.classList.add("formazott");
+    let div=$('.lista')
+    div.addClass("formazott");
 
 }
 function Esemenykezeles1(){
-    let div=document.querySelector('.lista')
-    div.addEventListener('click',belerak);
+    let div=$('.lista')
+    div.click(belerak);
 
 }
 function belerak() {
