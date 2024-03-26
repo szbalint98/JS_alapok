@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+$(document).ready(function(){
     elemekElerese1();
     elemekElerese2();
     elemekElerese3();
@@ -7,25 +7,28 @@ window.addEventListener("load", function () {
     Esemenykezeles1();
     Esemenykezeles2();
     Esemenykezeles4();
-});
+
+
+})
+    
 const listam=[]
 function elemekElerese1() {
-    let cim=document.getElementById('f1')
+    let cim=$('#f1')
     console.log(cim)
-    console.log(cim.innerHTML)
+    console.log(cim.html())
 }
 function elemekElerese2() {
-    let div=document.getElementById('ide')
-    div.innerHTML+='<p>Jó reggelt!</p>';
+    let div=$('#ide')
+    div.html('<p>Jó reggelt!</p>');
     console.log(div)
 }
 function elemekElerese3() {
-    let div=document.querySelector('.ide')
-    div.innerHTML+='<p>Jó reggelt!</p>';
-    console.log(div)
+    let div=$('.ide')
+    div.html('<p>Jó reggelt!</p>');
+    console.log(div.html())
 }
 function elemekElerese4() {
-    let div=document.querySelector('.lista')
+    let div=$('.lista')
     
     let min=10
     let max =30
@@ -33,7 +36,7 @@ function elemekElerese4() {
     for (let index = 0; index < 5; index++) {
         random=Math.floor(Math.random()*(max-min+1))+min
         listam.push(random)
-        div.innerHTML+=(`${listam[index]},`)
+        div.html(`${listam[index]},`)
     }
     
     console.log(listam)
@@ -71,7 +74,7 @@ function hozzaad(){
     console.log(divELEM)
     divELEM.innerHTML+=`<div><img src="kepek/heble.jpg" alt="kep"></div>`
     Esemenykezeles3();
-    ES
+    
     
 }
 function Esemenykezeles3(){
